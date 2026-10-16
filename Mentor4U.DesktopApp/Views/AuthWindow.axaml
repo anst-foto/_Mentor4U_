@@ -1,0 +1,17 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Mentor4U.DesktopApp.ViewModels"
+        
+        x:Class="Mentor4U.DesktopApp.Views.AuthWindow"
+        x:DataType="vm:AuthWindowViewModel"
+        
+        Icon="/Assets/avalonia-logo.ico"
+        Title="{StaticResource ResourceKey=Title}">
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+    
+    
+</Window>

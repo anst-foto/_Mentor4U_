@@ -5,6 +5,10 @@
              RequestedThemeVariant="Default">
     <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
+    <Application.Resources>
+        <x:String x:Key="Title">Mentor4U</x:String>
+    </Application.Resources>
+    
     <Application.DataTemplates>
         <local:ViewLocator />
     </Application.DataTemplates>

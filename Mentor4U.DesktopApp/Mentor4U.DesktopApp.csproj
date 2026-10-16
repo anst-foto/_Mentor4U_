@@ -24,4 +24,8 @@
     <PackageReference Include="ReactiveUI.SourceGenerators"/>
     <!-- </ReactiveUI> -->
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mentor4U.CoreLib\Mentor4U.CoreLib.csproj" />
+  </ItemGroup>
 </Project>
