@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             
+             x:Class="Mentor4U.DesktopApp.Components.InputComponent"
+             x:Name="Component">
+    
+    <UserControl.Styles>
+        <StyleInclude Source="InputComponentStyles.axaml"/>
+    </UserControl.Styles>
+    
+    <Grid ColumnDefinitions="*, 3*"
+          DataContext="{Binding ElementName=Component}">
+        <Label Target="{Binding ElementName=Input}"
+               Content="{Binding Path=LabelContent, Mode=OneWay}"
+               Grid.Column="0"/>
+        <TextBox x:Name="Input"
+                 Text="{Binding Path=InputValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 IsEnabled="{Binding Path=IsEnabled, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                 IsReadOnly="{Binding Path=IsReadOnly, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                 PasswordChar="{Binding Path=PasswordChar, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                 RevealPassword="{Binding Path=RevealPassword, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                 Grid.Column="1"/>
+    </Grid>
+</UserControl>
