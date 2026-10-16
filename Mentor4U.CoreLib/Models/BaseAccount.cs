@@ -1,6 +1,6 @@
 using System;
 
-namespace Mentor4U.CoreLib.Interfaces;
+namespace Mentor4U.CoreLib.Models;
 
 public abstract class BaseAccount
 {
