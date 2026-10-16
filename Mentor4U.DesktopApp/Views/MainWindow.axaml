@@ -6,7 +6,7 @@
         x:DataType="vm:MainWindowViewModel"
         
         Icon="/Assets/avalonia-logo.ico"
-        Title="{StaticResource ResourceKey=Title}">
+        Title="{Binding Source={StaticResource Title}}">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,

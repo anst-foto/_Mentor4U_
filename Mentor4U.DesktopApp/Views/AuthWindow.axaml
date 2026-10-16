@@ -1,17 +1,32 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:Mentor4U.DesktopApp.ViewModels"
+        xmlns:c="using:Mentor4U.DesktopApp.Components"
         
         x:Class="Mentor4U.DesktopApp.Views.AuthWindow"
-        x:DataType="vm:AuthWindowViewModel"
         
         Icon="/Assets/avalonia-logo.ico"
-        Title="{StaticResource ResourceKey=Title}">
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel />
-    </Design.DataContext>
+        Title="{Binding Source={StaticResource Title}, StringFormat='{}{0}. Авторизация'}"
+        
+        WindowStartupLocation="CenterScreen"
+        CanResize="False"
+        CanMaximize="False">
     
-    
+    <StackPanel Orientation="Vertical">
+        <TextBlock>Авторизация</TextBlock>
+        
+        <StackPanel Orientation="Vertical">
+            <c:InputComponent x:Name="Input_Login"
+                              LabelContent="Логин"/>
+            <c:InputComponent x:Name="Input_Password"
+                              LabelContent="Пароль"
+                              PasswordChar="*"/>
+            
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="Button_Login"
+                        Content="Войти"/>
+                <Button x:Name="Button_Cancel"
+                        Content="Отмена"/>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
 </Window>
