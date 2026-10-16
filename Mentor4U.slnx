@@ -1,11 +1,12 @@
 <Solution>
   <Folder Name="/git/">
-    <File Path=".gitattributes"/>
-    <File Path=".gitignore"/>
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
   </Folder>
   <Folder Name="/others/">
-    <File Path=".editorconfig"/>
-    <File Path="Directory.Packages.props"/>
+    <File Path=".editorconfig" />
+    <File Path="Directory.Packages.props" />
   </Folder>
-  <Project Path="Mentor4U.DesktopApp/Mentor4U.DesktopApp.csproj"/>
+  <Project Path="Mentor4U.CoreLib/Mentor4U.CoreLib.csproj" />
+  <Project Path="Mentor4U.DesktopApp/Mentor4U.DesktopApp.csproj" />
 </Solution>
