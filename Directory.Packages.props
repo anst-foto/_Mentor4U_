@@ -9,6 +9,11 @@
     <AvaloniaVersion>12.0.4</AvaloniaVersion>
     <ReactiveUIAvaloniaVersion>11.3.8</ReactiveUIAvaloniaVersion>
     <ReactiveUISourceGeneratorsVersion>4.2.0</ReactiveUISourceGeneratorsVersion>
+    <NpgsqlVersion>10.0.3</NpgsqlVersion>
+    <MicrosoftNETTestSdk>18.11.0</MicrosoftNETTestSdk>
+    <xUnit>2.9.3</xUnit>
+    <xUnitRunnerVisualstudio>4.0.1</xUnitRunnerVisualstudio>
+    <TestcontainersPostgreSql>4.16.0</TestcontainersPostgreSql>
     <!-- </Versions> -->
   </PropertyGroup>
 
@@ -24,5 +29,16 @@
     <PackageVersion Include="ReactiveUI.Avalonia" Version="$(ReactiveUIAvaloniaVersion)"/>
     <PackageVersion Include="ReactiveUI.SourceGenerators" Version="$(ReactiveUISourceGeneratorsVersion)"/>
     <!-- </ReactiveUI> -->
+    
+    <!-- <EF> -->
+    <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="$(NpgsqlVersion)" />
+    <!-- </EF> -->
+    
+    <!-- <Test> -->
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdk)" />
+    <PackageVersion Include="xunit" Version="$(xUnit)" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="$(xUnitRunnerVisualstudio)" />
+    <PackageVersion Include="Testcontainers.PostgreSql" Version="$(TestcontainersPostgreSql)" />
+    <!-- </Test> -->
   </ItemGroup>
 </Project>

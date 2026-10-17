@@ -1,4 +1,8 @@
 <Solution>
+  <Folder Name="/CoreLib/">
+    <Project Path="Mentor4U.CoreLib.Test/Mentor4U.CoreLib.Test.csproj" />
+    <Project Path="Mentor4U.CoreLib/Mentor4U.CoreLib.csproj" />
+  </Folder>
   <Folder Name="/git/">
     <File Path=".gitattributes" />
     <File Path=".gitignore" />

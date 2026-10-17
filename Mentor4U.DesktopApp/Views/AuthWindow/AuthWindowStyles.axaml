@@ -1,0 +1,93 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Карточка: она же визуальная рамка всего окна -->
+    <Style Selector="Border.AuthCard">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="CornerRadius" Value="16"/>
+        <Setter Property="Padding" Value="36,32"/>
+        <Setter Property="BoxShadow" Value="0 10 40 0 #40000000"/>
+    </Style>
+
+    <!-- Заголовок -->
+    <Style Selector="TextBlock.AuthTitle">
+        <Setter Property="FontSize" Value="26"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="#111827"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,0,6"/>
+    </Style>
+
+    <!-- Подзаголовок -->
+    <Style Selector="TextBlock.AuthSubtitle">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="#6B7280"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <!-- Кнопка закрытия -->
+    <Style Selector="Button.AuthClose">
+        <Setter Property="Width" Value="28"/>
+        <Setter Property="Height" Value="28"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="#6B7280"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="CornerRadius" Value="14"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+
+    <Style Selector="Button.AuthClose:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="#FEE2E2"/>
+        <Setter Property="TextBlock.Foreground" Value="#DC2626"/>
+    </Style>
+
+    <Style Selector="Button.AuthClose:pressed /template/ ContentPresenter">
+        <Setter Property="Background" Value="#FECACA"/>
+    </Style>
+
+    <!-- Основная кнопка -->
+    <Style Selector="Button.AuthPrimary">
+        <Setter Property="Background" Value="#3B82F6"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Padding" Value="20,12"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+    </Style>
+
+    <Style Selector="Button.AuthPrimary:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="#2563EB"/>
+    </Style>
+
+    <Style Selector="Button.AuthPrimary:pressed /template/ ContentPresenter">
+        <Setter Property="Background" Value="#1D4ED8"/>
+    </Style>
+
+    <!-- Второстепенная кнопка -->
+    <Style Selector="Button.AuthSecondary">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="#374151"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Padding" Value="20,12"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="BorderBrush" Value="#D1D5DB"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+    </Style>
+
+    <Style Selector="Button.AuthSecondary:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="#F3F4F6"/>
+    </Style>
+
+    <Style Selector="Button.AuthSecondary:pressed /template/ ContentPresenter">
+        <Setter Property="Background" Value="#E5E7EB"/>
+    </Style>
+</Styles>

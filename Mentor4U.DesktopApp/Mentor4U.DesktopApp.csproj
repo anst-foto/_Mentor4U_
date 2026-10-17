@@ -28,4 +28,11 @@
   <ItemGroup>
     <ProjectReference Include="..\Mentor4U.CoreLib\Mentor4U.CoreLib.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\AuthWindow\AuthWindow.axaml.cs">
+      <DependentUpon>AuthWindow.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>

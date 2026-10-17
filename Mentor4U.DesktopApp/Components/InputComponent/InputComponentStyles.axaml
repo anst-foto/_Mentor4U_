@@ -1,4 +1,31 @@
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
+
+    <!-- Label внутри InputComponent -->
+    <Style Selector="Label">
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="#374151"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <!-- TextBox внутри InputComponent: базовый вид -->
+    <Style Selector="TextBox">
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="Padding" Value="12,10"/>
+        <Setter Property="MinHeight" Value="42"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Background" Value="#F9FAFB"/>
+        <Setter Property="BorderBrush" Value="#D1D5DB"/>
+    </Style>
+
+    <!-- TextBox: наведение -->
+    <Style Selector="TextBox:pointerover /template/ Border#PART_BorderElement">
+        <Setter Property="BorderBrush" Value="#9CA3AF"/>
+    </Style>
+
+    <!-- TextBox: фокус -->
+    <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+        <Setter Property="BorderBrush" Value="#3B82F6"/>
+        <Setter Property="BorderThickness" Value="2"/>
+    </Style>
 </Styles>

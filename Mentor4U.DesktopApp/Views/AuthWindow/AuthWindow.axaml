@@ -1,0 +1,63 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="using:Mentor4U.DesktopApp.Components"
+
+        x:Class="Mentor4U.DesktopApp.Views.AuthWindow"
+        Classes="AuthWindow"
+
+        Icon="/Assets/avalonia-logo.ico"
+        Title="{Binding Source={StaticResource ResourceKey=Title}, StringFormat='{}{0}. Авторизация'}"
+
+        SystemDecorations="None"
+        TransparencyLevelHint="Transparent"
+        Background="Transparent"
+
+        WindowStartupLocation="CenterScreen"
+        CanResize="False"
+        CanMaximize="False"
+        Width="432"
+        SizeToContent="Height"
+
+        PointerPressed="OnWindowPointerPressed">
+
+    <Window.Styles>
+        <StyleInclude Source="AuthWindowStyles.axaml"/>
+    </Window.Styles>
+
+    <Border Classes="AuthCard" Margin="16">
+        <Grid>
+            <Button Classes="AuthClose"
+                    Content="✕"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0,-16,-16,0"
+                    Click="OnCloseClick"/>
+
+            <StackPanel Margin="0,8,0,0">
+                <TextBlock Classes="AuthTitle" Text="Добро пожаловать"/>
+                <TextBlock Classes="AuthSubtitle" Text="Войдите в свой аккаунт Mentor4U"/>
+
+                <StackPanel Spacing="16" Margin="0,28,0,28">
+                    <c:InputComponent x:Name="Input_Login"
+                                      LabelContent="Логин"/>
+                    <c:InputComponent x:Name="Input_Password"
+                                      LabelContent="Пароль"
+                                      PasswordChar="*"/>
+                </StackPanel>
+
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                    <Button Grid.Column="0"
+                            Classes="AuthSecondary"
+                            Content="Отмена"
+                            HorizontalAlignment="Stretch"
+                            Click="OnCloseClick"/>
+                    <Button Grid.Column="1"
+                            Classes="AuthPrimary"
+                            Content="Войти"
+                            HorizontalAlignment="Stretch"
+                            Click="OnLoginClick"/>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
